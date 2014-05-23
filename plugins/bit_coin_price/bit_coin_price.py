@@ -8,7 +8,6 @@ from threading import Thread, InterruptedException
 from urllib import urlopen
 from java.lang import Boolean
 
-
 def run():
   """
   This is the entry point for this script.
