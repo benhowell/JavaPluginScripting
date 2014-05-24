@@ -40,18 +40,6 @@ public final class Main {
     System.exit(0);
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
   public static List<ScriptManager> loadPlugins(String directoryName) {
     List<ScriptManager> managers = new ArrayList<ScriptManager>();
     File directory = new File(directoryName);
