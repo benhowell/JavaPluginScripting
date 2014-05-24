@@ -151,8 +151,10 @@ function main(self){
   function inner(){
     while(!self.threadCancelled){
       with(JavaScanner){
-        var scanner = new Scanner(new URL('http://api.automeme.net/text?lines=3').openStream(), "UTF-8");
-        delegate.dispatch(scanner.toString());
+        var scanner = new Scanner(new URL('http://api.automeme.net/text?lines=1').openStream(), "UTF-8");
+        while (scanner.hasNextLine()) {
+          delegate.dispatch(scanner.nextLine());
+        }
         scanner.close();
       }
       self.sleeper.sleep(3); // just wait around a bit...
